@@ -36,5 +36,3 @@ myServer.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`);
     console.log('To terminate it, use Ctrl+C combination');
 });
-
-export default myServer;
