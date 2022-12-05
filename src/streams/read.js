@@ -1,5 +1,5 @@
 import process from "process";
-import * as fsp from "fs/promises";
+import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -12,7 +12,7 @@ const read = async () => {
   const pathToFile = path.join(__dirname, "files", "fileToRead.txt");
 
   try {
-    const readableStream = fsp.createReadStream(pathToFile);
+    const readableStream = fs.createReadStream(pathToFile);
     readableStream.on("data", (chunk) => stdout.write(`${chunk}\n`));
   } catch (e) {
     console.log(e);
