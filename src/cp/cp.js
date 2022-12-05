@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const spawnChildProcess = async (args) => {
     const pathtoChild = path.join(__dirname, 'files', 'script.js');
-    await child_process.fork(pathtoChild, args)
+    await child_process.fork(pathtoChild, args);
 };
 
 spawnChildProcess();
